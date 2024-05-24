@@ -39,3 +39,6 @@ YelpCamp is a full-stack website project where users can create and review campg
 ## Screenshots of Application Pages
 >Home Page
 >![Screenshot (654)](https://github.com/SourabhMalviya9090/YelpCamp_FullStackProject/assets/142317647/6f5616fc-ac8b-40ff-94f7-2625d5ff341a)
+
+>All Campgrounds Page
+>![Screenshot (655)](https://github.com/SourabhMalviya9090/YelpCamp_FullStackProject/assets/142317647/e2e568e3-3bec-414a-94ad-e2d600e8ab12)

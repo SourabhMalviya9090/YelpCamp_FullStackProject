@@ -1,0 +1,78 @@
+<% layout("layouts/boilerplate") %>
+<div class="row">
+    <h1 class="text-center">Edit Campground</h1>
+    <div class="col-md-6 offset-md-3">
+        <form action="/campgrounds/<%=foundGround._id%>?_method=PUT" method="POST" novalidate class="validated-form" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label class="form-label" for="name">Name:</label>
+                <input class="form-control" type="text" id="name" name="name"
+                    value="<%=foundGround.name %>" required>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid name
+                      </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="location">Location:</label>
+                <input class="form-control" type="text" id="location" name="location"
+                    value="<%=foundGround.location %>" required>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please choose a valid location
+                      </div>
+            </div>
+            <div class="mb-3">
+                <label for="image">Add More Images: </label>
+            <div class="input-group mb-3 custom-file">
+                <input type="file" class="form-control" id="image" name="image" multiple>
+              </div>
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="price">Campground Price:</label>
+                <div class="input-group">
+                    <span class="input-group-text" id="price">$</span>
+                    <input type="text" class="form-control" id="price" placeholder="0.00" aria-label="price"
+                        aria-describedby="price-label" name="price" value="<%=foundGround.price %>" required>
+                        <div class="valid-feedback">
+                            Looks Good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Please fill a valid Price
+                          </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="description">Description:</label>
+                <textarea class="form-control" type="text" id="description"
+                    name="description"  required><%= foundGround.description%></textarea>
+                    <div class="valid-feedback">
+                        Looks Good!
+                    </div>
+                    <div class="invalid-feedback">
+                        Please fill a description
+                      </div>
+            </div>
+            <!--  -->
+            <div class="mb-3">
+                <% for(let i=0;i<foundGround.image.length;i++){ %>
+                    <img src="<%= ((foundGround.image)[i]).thumbnail %>" alt="" class="img-thumbnail">
+                <div class="form-check-inline">
+                    <input type="checkbox" id="image-<%= i %>" name="deleteImages[]" value="<%= foundGround.image[i].fileName %>">
+                </div>
+                <label for="image-<%= i %>">Delete?!</label>
+                <% } %>
+            </div>
+            <!--  -->
+            <div class="mb-3">
+                <button class="btn btn-info">Update Campground</button>
+            </div>
+        </form>
+        <a href="/campgrounds/<%= foundGround._id%>">Back To Campground</a>
+
+    </div>
+</div>

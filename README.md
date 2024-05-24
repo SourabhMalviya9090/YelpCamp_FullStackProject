@@ -32,5 +32,10 @@ YelpCamp is a full-stack website project where users can create and review campg
 
 >Render - cloud platform as a service used as a web application deployment model
 
->MongoDb Atlas - cloud based data base used for storing collections: campgrounds, users, reviews
+>MongoDb Atlas - cloud based data base used for storing collections: campgrounds, users, reviews.
+
 >MapBox - Provider of custom online maps for websites and applications. In this project it is used for using cluster maps and pin maps.
+
+## Screenshots of Application Pages
+>Home Page
+>![Screenshot (654)](https://github.com/SourabhMalviya9090/YelpCamp_FullStackProject/assets/142317647/6f5616fc-ac8b-40ff-94f7-2625d5ff341a)
